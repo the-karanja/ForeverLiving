@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "/home-05"
+  status = 200
+  force = true
