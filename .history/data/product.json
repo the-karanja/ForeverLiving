@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "category": "Vegetables",
+            "product_name": "absorbentC",
+            "price": {
+                "current_price": "£85.00",
+                "original_price": "£95.00"
+            },
+            "images": [
+                "assets/images/details-product/p01.jpg",
+                "assets/images/details-product/p02.jpg",
+                "assets/images/details-product/p03.jpg",
+                "assets/images/details-product/p06.jpg",
+                "assets/images/details-product/p07.jpg"
+            ],
+            "thumbnails": [
+                "assets/images/details-product/thumb_p01.jpg",
+                "assets/images/details-product/thumb_p02.jpg",
+                "assets/images/details-product/thumb_p03.jpg",
+                "assets/images/details-product/thumb_p06.jpg",
+                "assets/images/details-product/thumb_p07.jpg"
+            ],
+            "rating": 80,
+            "reviews": 4,
+            "description": "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
+            "sku": "Sku: #76584HH",
+            "shipping_info": {
+                "shipping_days": "3-Day Shipping",
+                "pickup_today": "Pree Pickup Today"
+            },
+            "accepted_payment_methods": [
+                "assets/images/card1.jpg",
+                "assets/images/card2.jpg",
+                "assets/images/card3.jpg",
+                "assets/images/card4.jpg"
+            ]
+        }
+    ]
+}
