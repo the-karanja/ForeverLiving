@@ -1,0 +1,10 @@
+# netlify.toml
+
+[build]
+  publish = "public" # Replace "public" with the folder name containing your HTML, CSS, JS, and JSON files
+  command = ""       # No build command needed for static sites
+
+[[redirects]]
+  from = "/*"
+  to = "/homepage.html"
+  status = 200

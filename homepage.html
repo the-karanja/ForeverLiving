@@ -1,0 +1,225 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forever Living Product</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Custom Styles */
+    .navbar-brand {
+      font-size: 1.5rem;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+      color: white;
+      margin-right: 1rem;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #d3d3d3;
+    }
+    .hero-section {
+      background: url('https://i.pinimg.com/736x/51/5f/7d/515f7ddb766231fab2ee98d76593eed8.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      color: #4CAF50;
+      position: relative;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .hero-content h1 {
+      color: #00AEEF;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .hero-content p {
+      color: #666;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="#">FOREVER LIVING PRODUCT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="/homepage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Checkout</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Bee.html">BEE PRODUCTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="/supliments.html">SUPPLEMENTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">MEN</a></li>
+          <li class="nav-item"><a class="nav-link" href="/weight.html">WEIGHT </a></li>
+          <li class="nav-item"><a class="nav-link" href="/personal-care.html">PERSONAL</a></li>
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-outline-light" type="button"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center text-white d-flex align-items-center">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Have you had your Aloe today</h1>
+        <p>Quality Aloe vera based products</p>
+        <a href="#features" class="btn btn-success btn-lg mt-4">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+
+  <section id="services" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Best Selling Products</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="https://i0.wp.com/foreverlivingke.co.ke/wp-content/uploads/2024/04/absorbent-c.jpg?resize=300%2C300&ssl=1" class="card-img-top" alt="Service 1">
+            <div class="card-body">
+              <h5 class="card-title">ALOE VERA DRINKS</h5>
+              <a href="your-shop-url" class="btn btn-success mt-3">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="https://i0.wp.com/foreverlivingke.co.ke/wp-content/uploads/2024/04/1493314416974Forever-Calcium-Cutout_2015_small.png?resize=300%2C300&ssl=1" class="card-img-top" alt="Service 2">
+            <div class="card-body">
+              <h5 class="card-title">NUTRITION PRODUCTS</h5>
+              <a href="your-shop-url" class="btn btn-success mt-3">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="https://i0.wp.com/foreverlivingke.co.ke/wp-content/uploads/2024/04/1503052224615toothgel600.png?resize=300%2C300&ssl=1" class="card-img-top" alt="Service 3">
+            <div class="card-body">
+              <h5 class="card-title">WEIGHT MANAGEMENT</h5>
+              <a href="your-shop-url" class="btn btn-success mt-3">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container text-center">
+ 
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="https://i0.wp.com/foreverlivingke.co.ke/wp-content/uploads/2024/04/zdravljeialoe.com_forever_move_youtube.png?resize=300%2C300&ssl=1" class="card-img-top" alt="Service 1">
+            <div class="card-body">
+              <h5 class="card-title">SKINCARE PRODUCTS</h5>
+              <a href="your-shop-url" class="btn btn-success mt-3">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="https://i0.wp.com/foreverlivingke.co.ke/wp-content/uploads/2024/04/1495723561061heat600.png?resize=300%2C300&ssl=1" class="card-img-top" alt="Service 2">
+            <div class="card-body">
+              <h5 class="card-title">PERSONAL CARE</h5>
+              <a href="your-shop-url" class="btn btn-success mt-3">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="https://i0.wp.com/foreverlivingke.co.ke/wp-content/uploads/2024/04/alpha-e.png?resize=300%2C300&ssl=1" class="card-img-top" alt="Service 3">
+            <div class="card-body">
+              <h5 class="card-title">BEE PRODUCTS</h5>
+              <a href="your-shop-url" class="btn btn-success mt-3">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">What Our Clients Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="lead">"Fantastic service! Highly recommend to anyone."</p>
+            <small>- Client Name 1</small>
+          </div>
+          <div class="carousel-item">
+            <p class="lead">"Professional, efficient, and excellent results."</p>
+            <small>- Client Name 2</small>
+          </div>
+          <div class="carousel-item">
+            <p class="lead">"They went above and beyond my expectations!"</p>
+            <small>- Client Name 3</small>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-2">© 2024 Forever Living Product. All Rights Reserved.</p>
+      <div>
+        <a href="#home" class="text-white me-3">Home</a>
+        <a href="#features" class="text-white me-3">Features</a>
+        <a href="#services" class="text-white me-3">Services</a>
+        <a href="#contact" class="text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

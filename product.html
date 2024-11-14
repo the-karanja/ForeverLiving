@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forever Living Product - Shop</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <style>
+          /* Custom Styles */
+          .navbar-brand {
+            font-size: 1.5rem;
+            color: #4CAF50;
+            font-weight: bold;
+          }
+          .navbar-nav .nav-link {
+            color: white;
+            margin-right: 1rem;
+          }
+          .navbar-nav .nav-link:hover {
+            color: #d3d3d3;
+          }
+          .hero-section {
+            background: url('https://i0.wp.com/foreverlivingke.co.ke/wp-content/uploads/2024/04/restoring.png?resize=300%2C300&ssl=1') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: #4CAF50;
+            position: relative;
+          }
+          .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+            z-index: 1;
+          }
+          .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+          }
+          .hero-content h1 {
+            color: #00AEEF;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+          }
+          .hero-content p {
+            color: #666;
+            font-size: 1.2rem;
+            text-align: center;
+          }
+          .product-card {
+            height: 100%;
+          }
+          .btn-block {
+            width: 100%;
+          }
+        </style>
+      </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+          <a class="navbar-brand" href="#">FOREVER LIVING PRODUCT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Checkout</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ALOEDRINKS</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">SUPPLEMENTS</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">MEN</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">WEIGHT </a></li>
+              <li class="nav-item"><a class="nav-link" href="#">PERSONAL</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<div class="container mt-5">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item" id="product-category">Category</li>
+            <li class="breadcrumb-item active" aria-current="page" id="product-name">Product Name</li>
+        </ol>
+    </nav>
+
+    <!-- Product Information Section -->
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-4 text-center">
+            <img id="product-image" src="" class="img-fluid" alt="Product Image">
+        </div>
+        
+        <!-- Product Details -->
+        <div class="col-md-8">
+            <h3 id="product-name-heading">Product Name</h3>
+            <h4 class="text-primary" id="product-price">Price not available</h4>
+            <p>120 tablets</p>
+
+            <!-- Add to Cart and WhatsApp Order Buttons -->
+            <div class="d-flex mb-3">
+                <input type="number" class="form-control me-2" value="1" style="width: 70px;">
+                <button class="btn btn-warning me-2">Add to cart</button>
+                <button class="btn btn-success">Order on WhatsApp</button>
+            </div>
+
+            <!-- SKU, Category, Tag -->
+            <p><strong>Category:</strong> <span id="product-category-span">Category</span></p>
+            <p><strong>Tag:</strong> <span id="product-tag">Product Tag</span></p>
+        </div>
+    </div>
+
+    <!-- Description and Details Section -->
+    <div class="mt-5">
+        <h4>Description</h4>
+        <p id="product-description">Description not available</p>
+
+        <h5 class="mt-4">Benefits</h5>
+        <ul id="product-benefits">
+            <!-- Benefits will be populated here -->
+        </ul>
+
+        <h5 class="mt-4">Ingredients</h5>
+        <p id="product-ingredients">Ingredients not available</p>
+
+        <h5 class="mt-4">Directions</h5>
+        <p id="product-directions">Directions not available</p>
+    </div>
+    <div class="container mt-4">
+        <select id="sort-options" class="form-select" onchange="sortAndDisplayProducts()">
+          <option value="default">Default sorting</option>
+          <option value="popularity">Sort by popularity</option>
+          <option value="rating">Sort by average rating</option>
+          <option value="latest">Sort by latest</option>
+          <option value="price-low-high">Sort by price: low to high</option>
+          <option value="price-high-low">Sort by price: high to low</option>
+        </select>
+      </div>
+    
+      <!-- Product Grid Section -->
+      <section id="shop" class="container my-4">
+        <div class="row" id="product-grid">
+          <!-- Product cards will be injected here -->
+        </div>
+      </section>
+    
+      <!-- Pagination Controls -->
+      <div class="container d-flex justify-content-center my-4">
+        <nav>
+          <ul class="pagination" id="pagination-controls">
+            <!-- Pagination buttons will be injected here -->
+          </ul>
+        </nav>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+  </script>
+<script>
+
+// Fetch JSON data and populate the page with the specific product
+fetch('updated_shop.json')
+    .then(response => response.json())
+    .then(data => {
+        itemName = location.search.replace("?product_id=","").replaceAll("-"," ")
+        
+        // Find the product with the specific name
+        const productData = data.find(item => item.name === itemName);
+
+        //render the related items in terms of category
+        const productCategory = productData.category
+        loadProducts(productCategory)
+
+        if (productData) {
+            // Populate the page with JSON data
+            document.getElementById('product-name').textContent = productData.name;
+            document.getElementById('product-name-heading').textContent = productData.name;
+            document.getElementById('product-description').textContent = productData.description;
+            document.getElementById('product-price').textContent = productData.price;
+            document.getElementById('product-category').textContent = productData.category;
+            document.getElementById('product-category-span').textContent = productData.category;
+            document.getElementById('product-tag').textContent = productData.name;
+            document.getElementById('product-ingredients').textContent = productData.ingredients;
+            document.getElementById('product-directions').textContent = productData.directions;
+            document.getElementById('product-image').src = productData.image_url;
+
+            // Populate the benefits list
+            const benefitsList = document.getElementById('product-benefits');
+            if (productData.benefits.length === 0) {
+                benefitsList.innerHTML = "<li>No benefits available</li>";
+            } else {
+                productData.benefits.forEach(benefit => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = benefit;
+                    benefitsList.appendChild(listItem);
+                });
+            }
+        } else {
+            console.error("Product not found.");
+        }
+    })
+    .catch(error => console.error("Error fetching data:", error));
+
+    const productsPerPage = 12;
+    let currentPage = 1;
+    let products = [];
+
+    // Function to load and display products from JSON file
+    async function loadProducts(category) {
+      try {
+        const response = await fetch('updated_shop.json');
+        //products = await response.json();
+        unfiltered_products = await response.json();
+        products = unfiltered_products.filter(product => product.category === category)
+        displayProducts();
+        createPagination();
+      } catch (error) {
+        console.error('Error loading products:', error);
+      }
+    }
+
+    // Function to sort and display products based on selected option
+    function sortAndDisplayProducts() {
+      const sortOption = document.getElementById("sort-options").value;
+      
+      if (sortOption === "price-low-high") {
+        products.sort((a, b) => a.price - b.price);
+      } else if (sortOption === "price-high-low") {
+        products.sort((a, b) => b.price - a.price);
+      } // Add more conditions for other sort options if needed
+
+      displayProducts();
+    }
+
+    // Function to display products for the current page
+    function displayProducts() {
+      const productGrid = document.getElementById("product-grid");
+      productGrid.innerHTML = '';
+
+      const startIndex = (currentPage - 1) * productsPerPage;
+      const endIndex = startIndex + productsPerPage;
+      const productsToShow = products.slice(startIndex, endIndex);
+
+      productsToShow.forEach(product => {
+//         const productHTML = `
+//   <div class="col-md-3 col-sm-6 mb-4">
+//     <div class="card h-100 product-card">
+//       <img src="${product.image_url}" class="card-img-top" alt="${product.names}">
+//       <div class="card-body text-center">
+//         <h6 class="text-muted">${product.category}</h6>
+//         <h5 class="card-title">${product.name}</h5>
+//         <p class="text-primary font-weight-bold">${product.price}</p>
+//         <button class="btn btn-warning btn-block mb-2">Add to cart</button>
+//         <a href="https://wa.me/0743126150?text=${encodeURIComponent(`Hello, I want to purchase:\n\n*${product.name}*\n*Price:* ${product.price}\n*URL:* ${product.url}\n\nThank you!`)}" class="btn btn-success btn-block" target="_blank">Order on Whatsapp</a>
+//       </div>
+//     </div>
+//   </div>
+// `;
+const productHTML = `
+  <div class="col-md-3 col-sm-6 mb-4">
+    <div class="card h-100 product-card" onclick="handleProductClick('${product.name}')">
+      <img src="${product.image_url}" class="card-img-top" alt="${product.names}">
+      <div class="card-body text-center">
+        <h6 class="text-muted">${product.category}</h6>
+        <h5 class="card-title">${product.name}</h5>
+        <p class="text-primary font-weight-bold">${product.price}</p>
+        <button class="btn btn-warning btn-block mb-2">Add to cart</button>
+        <a href="https://wa.me/0743126150?text=${encodeURIComponent(`Hello, I want to purchase:\n\n*${product.name}*\n*Price:* ${product.price}\n*URL:* ${product.url}\n\nThank you!`)}" class="btn btn-success btn-block" target="_blank">Order on Whatsapp</a>
+      </div>
+    </div>
+  </div>
+`;
+
+
+        productGrid.insertAdjacentHTML('beforeend', productHTML);
+      });
+    }
+    // JavaScript function to handle product click
+function handleProductClick(productName) {
+
+  let base_url = `http://127.0.0.1:3000/c:/Users/Asus/Downloads/product.html?product_id=${productName.replaceAll(" ","-")}`
+  window.location.href = base_url
+  //alert(`Product clicked: ${base_url}`);
+  // You can replace the alert with any other functionality you want to implement
+}
+
+    // Function to create pagination buttons
+    function createPagination() {
+      const totalPages = Math.ceil(products.length / productsPerPage);
+      const paginationControls = document.getElementById("pagination-controls");
+      paginationControls.innerHTML = '';
+
+      for (let i = 1; i <= totalPages; i++) {
+        const pageItem = `
+          <li class="page-item ${i === currentPage ? 'active' : ''}">
+            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+          </li>
+        `;
+        paginationControls.insertAdjacentHTML('beforeend', pageItem);
+      }
+    }
+
+    // Function to change page
+    function changePage(page) {
+      currentPage = page;
+      displayProducts();
+      createPagination();
+    }
+
+    //loadProducts();
+</script>
+
+</body>
+</html>
