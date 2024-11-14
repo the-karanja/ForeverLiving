@@ -1,7 +1,7 @@
 # netlify.toml
 
 [build]
-  publish = "ken" # Replace "public" with the folder name containing your HTML, CSS, JS, and JSON files
+  publish = "" # Replace "public" with the folder name containing your HTML, CSS, JS, and JSON files
   command = ""       # No build command needed for static sites
 
 [[redirects]]
