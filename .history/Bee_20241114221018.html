@@ -143,7 +143,7 @@
       try {
         const response = await fetch('updated_shop.json');
         unfiltered_products = await response.json();
-        products = unfiltered_products.filter(product => product.category === "PERSONAL CARE")
+        products = unfiltered_products.filter(product => product.category === "BEE PRODUCTS")
         //products = await response.json();
         displayProducts();
         createPagination();
@@ -211,7 +211,7 @@ const productHTML = `
     // JavaScript function to handle product click
 function handleProductClick(productName) {
 
-  let base_url = `/product.html?product_id=${productName.replaceAll(" ","-")}`
+  let base_url = `http://127.0.0.1:3000/c:/Users/Asus/Downloads/product.html?product_id=${productName.replaceAll(" ","-")}`
   window.location.href = base_url
   //alert(`Product clicked: ${base_url}`);
   // You can replace the alert with any other functionality you want to implement
